@@ -1,3 +1,23 @@
+/* Key Ideas
+ * 1. When there's an error, jump to an error part
+ * of the function that knows how to clean up the 
+ * error then return an error code.
+ * 2. For all of the error loggers, use error: in 
+ * there
+ * 3. What is the C Preprocessor?
+ * 3.a -> Replaces amcros with the expanded version 
+ *     -> of their definition.
+ * 3.b -> It will replace recursively
+ * 3.c -> So the CPP is a recursive templating 
+ *     -> system
+ * 3.d -> Using this instead of if/then conditions 
+ *     -> will make your code cleaner
+ *     -> this also gives you __file__ and __line__
+*/
+
+
+
+
 // #ifndef checks whether the given token has been #defined earlier in the file or in an included file; if not, 
 // it includes the code between it and the closing #else or, if no #else is present, #endif statement. #ifndef 
 // is often used to make header files idempotent by defining a token once the file has been included and checking 
