@@ -7,6 +7,25 @@
 // -> there's an elegant way to do this without the curly brackets
 // -> do it before or after. especially when mutating data or when managing inputs
 
+// stack vs heap
+// heap is mainly great unwashed memory. it's not the data structure
+// -> allows dynamic data allocation
+// c -> malloc, calloc, realloc, free
+// c++ -> new, delete
+// -> malloc mainly reserves something in the heap
+// -> the only way to use memory in heap is reference / dereference
+// -> if malloc cannot find memory, it returns NULL and thus you need to set that up
+// stack is a data structure and stores local variables and functions
+// -> with sufficient recursion, you will cause stack overflow
+// -> comp archi decides stack size
+
+// stack and heap watchouts
+// 1. if you get a block of memory from mallo, and saved the pointer on the stack, when the function exits, you will lose the pointer
+// 2. too much data in stack will cause an overflow (recursion)
+// 3. if you take a pointer to something on the stack, then return if from your function, you will segfault because the pointer points at empty space
+
+// aborting early to let the OS clean it up is acceptable
+
 // personal notes
 // -> it's probably better to treat the Connection as the class intead of Database
 // -> that's because Database_* modifies Connection when Database is part of Connection
